@@ -11,7 +11,7 @@
 
 <main>
     <h1></h1>
-    <p>Votre nom est : <span id="nom" ></span></p>
+    <p>Votre nom est : <strong id="nom" ></strong></p>
 
     <p>
         <input type="text" onkeyup="getNom()"/>
