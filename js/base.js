@@ -60,25 +60,31 @@
 // console.log(b === c);
 // console.log(a === c);
 
-// Création d'élément html
-var p = document.createElement("p");
+// // Création d'élément html
+// var p = document.createElement("p");
+//
+// // Récupération d'élément html par tag
+// var paras = document.getElementsByTagName("p");
+//
+// // InnerHTML récupère l'html dans l'élément a la position zéros on peut ensuite le réassigner
+// paras[0].innerHTML = "Hellow World";
+//
+//
+// // Méthode magique plus puissante
+// // Renvois le premier élément trouver (par l'id, classe, tag)
+// document.querySelector();
+//
+// // Renvois tout les éléments trouver (par l'id, classe, tag)
+// document.querySelectorAll();
 
-// Récupération d'élément html par tag
-var paras = document.getElementsByTagName("p");
 
-// InnerHTML récupère l'html dans l'élément a la position zéros on peut ensuite le réassigner
-paras[0].innerHTML = "Hellow World";
+// Méthode parseInt pour transformer la chaine de caractère en entier
+var nombre1 = parseInt(prompt("Entrez le premier nombre"));
+var nombre2 = parseInt(prompt("Entrez le deuxième nombre"));
 
+var nombre3 = nombre1 + nombre2;
 
-// Méthode magique plus puissante
-// Renvois le premier élément trouver (par l'id, classe, tag)
-document.querySelector();
-
-// Renvois tout les éléments trouver (par l'id, classe, tag)
-document.querySelectorAll();
-
-
-
+document.write(nombre1+" + "+nombre2+"= "+nombre3);
 
 
 

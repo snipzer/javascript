@@ -10,7 +10,7 @@
 <body>
 
 <main>
-    <h1>toto</h1>
+    <h1></h1>
     <p></p>
 </main>
 
