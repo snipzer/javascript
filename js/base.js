@@ -85,36 +85,40 @@
 // var nombre3 = nombre1 + nombre2;
 //
 // document.querySelector("p").innerText = nombre1+" + "+nombre2+"= "+nombre3;
+//
+// // Fonction
+//
+// function calc(arg1, arg2)
+// {
+//     var result = parseInt(arg1) + parseInt(arg2);
+//     return (arg1+" + "+ arg2+ " = "+ result);
+// }
+//
+// //document.querySelector("p").innerText = calc(prompt("Entrez le premier nombre"), prompt("Entrez le deuxième nombre"));
+//
+//
+//
+//
+// function askId()
+// {
+//     var nom = "";
+//     var prenom = "";
+//     while(nom.length == 0)
+//     {
+//         nom = prompt("Renseignez votre nom:");
+//     }
+//     while(prenom.length == 0)
+//     {
+//         prenom = prompt("Renseignez votre prenom:");
+//     }
+//     document.querySelector("p").innerHTML= "Vous vous appelez <strong>"+prenom+" "+nom+"</strong>.";
+// }
 
-// Fonction
-
-function calc(arg1, arg2)
+// Récupération d'élément dans le formulaire
+function getNom()
 {
-    var result = parseInt(arg1) + parseInt(arg2);
-    return (arg1+" + "+ arg2+ " = "+ result);
+    document.querySelector("p").innerText = "Vous vous appelez "+document.querySelector("input").value+".";
 }
-
-//document.querySelector("p").innerText = calc(prompt("Entrez le premier nombre"), prompt("Entrez le deuxième nombre"));
-
-
-
-
-function askId()
-{
-    var nom = "";
-    var prenom = "";
-    while(nom.length == 0)
-    {
-        nom = prompt("Renseignez votre nom:");
-    }
-    while(prenom.length == 0)
-    {
-        prenom = prompt("Renseignez votre prenom:");
-    }
-    document.querySelector("p").innerHTML= "Vous vous appelez <strong>"+prenom+" "+nom+"</strong>.";
-}
-
-
 
 
 

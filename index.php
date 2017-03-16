@@ -13,7 +13,8 @@
     <h1></h1>
     <p></p>
     <p>
-        <button onclick="askId()" >Id ?</button>
+        <input type="text"/>
+        <button onclick="getNom()" >Submit</button>
     </p>
 </main>
 
