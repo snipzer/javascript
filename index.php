@@ -11,9 +11,11 @@
 
 <main>
     <h1></h1>
-    <p></p>
+    <p>Votre nom est : <span id="nom" ></span></p>
+
     <p>
         <input type="text" onkeyup="getNom()"/>
+        <button onclick="red()">Change color !</button>
 
     </p>
 </main>

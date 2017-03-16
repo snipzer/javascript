@@ -117,7 +117,13 @@
 // Récupération d'élément dans le formulaire
 function getNom()
 {
-    document.querySelector("p").innerText = "Vous vous appelez "+document.querySelector('input[type="text"]').value+".";
+    document.querySelector("span").innerText = document.querySelector('input[type="text"]').value;
+}
+
+// Coloration en rouge du nom
+function red()
+{
+    document.querySelector("#nom").setAttribute('style', 'color:red');
 }
 
 
