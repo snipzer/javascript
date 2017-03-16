@@ -121,9 +121,14 @@ function getNom()
 }
 
 // Coloration en rouge du nom
-function red()
+function aleaColor()
 {
-    document.querySelector("#nom").setAttribute('style', 'color:red');
+    var r = Math.round(Math.random() * (255 - 0) - 0);
+    var g = Math.round(Math.random() * (255-0) -0);
+    var b = Math.round(Math.random() * (255-0) -0);
+
+    console.log(r);
+    document.querySelector("#nom").setAttribute('style', 'color:rgb('+ r +','+ g + ','+ b +');');
 }
 
 
