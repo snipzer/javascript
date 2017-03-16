@@ -18,23 +18,38 @@
 // }
 
 
-// Création d'un objet
-var obj = {
-    prop: "value",
-    prop2: "value2"
-};
+// // Création d'un objet
+// var obj = {
+//     prop: "value",
+//     prop2: "value2"
+// };
+//
+// // Appel de la propriétée
+// document.write(obj.prop2);
+//
+// // Rajout d'une propriétée dans l'objet
+// obj['prop3'] = 4;
+//
+// document.write(obj.prop3);
+//
+// // Ecrit dans la console
+// console.log(obj);
+// // Passe une warning dans la console
+// console.warn(obj);
+// // Passe une erreur dans la console
+// console.error(obj);
 
-// Appel de la propriétée
-document.write(obj.prop2);
 
-// Rajout d'une propriétée dans l'objet
-obj['prop3'] = 4;
+// Comparaison
+var a = true;
+var b = 1;
+var c = '1';
 
-document.write(obj.prop3);
-
-// Ecrit dans la console
-console.log(obj);
-// Passe une warning dans la console
-console.warn(obj);
-// Passe une erreur dans la console
-console.error(obj);
+// Comparaison après conversion
+console.log(a == b);
+console.log(b == c);
+console.log(a == c);
+// Comparaison stricte
+console.log(a === b);
+console.log(b === c);
+console.log(a === c);
