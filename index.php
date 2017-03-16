@@ -10,7 +10,7 @@
 <body>
 
 </body>
-<script src="js/script.js"></script>
+<script src="js/base.js"></script>
 <noscript>
     Javascript est désactivé sur votre navigateur.
 </noscript>
