@@ -84,7 +84,7 @@ var nombre2 = parseInt(prompt("Entrez le deuxième nombre"));
 
 var nombre3 = nombre1 + nombre2;
 
-document.write(nombre1+" + "+nombre2+"= "+nombre3);
+document.querySelector("p").innerText = nombre1+" + "+nombre2+"= "+nombre3;
 
 
 
