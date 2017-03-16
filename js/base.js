@@ -111,10 +111,10 @@ function askId()
     {
         prenom = prompt("Renseignez votre prenom:");
     }
-    document.querySelector("p").innerText = "Vous vous appelez "+prenom+" "+nom+".";
+    document.querySelector("p").innerHTML= "Vous vous appelez <strong>"+prenom+" "+nom+"</strong>.";
 }
 
-askId();
+
 
 
 

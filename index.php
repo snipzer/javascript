@@ -12,6 +12,9 @@
 <main>
     <h1></h1>
     <p></p>
+    <p>
+        <button onclick="askId()" >Id ?</button>
+    </p>
 </main>
 
 <script src="js/base.js"></script>
