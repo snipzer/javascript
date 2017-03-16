@@ -117,7 +117,7 @@
 // Récupération d'élément dans le formulaire
 function getNom()
 {
-    document.querySelector("p").innerText = "Vous vous appelez "+document.querySelector("input").value+".";
+    document.querySelector("p").innerText = "Vous vous appelez "+document.querySelector('input[type="text"]').value+".";
 }
 
 
