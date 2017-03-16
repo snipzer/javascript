@@ -23,7 +23,6 @@
 // }
 
 
-
 // // Création d'un objet
 // var obj = {
 //     prop: "value",
@@ -115,22 +114,42 @@
 // }
 
 // Récupération d'élément dans le formulaire
-function getNom()
-{
+function randomize(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+// Récupère le nom du premier input type text et l'affiche dans les div ayant l'id nom
+function getNom() {
     document.querySelector("#nom").innerText = document.querySelector('input[type="text"]').value;
 }
 
 // Coloration en rouge du nom
-function aleaColor()
-{
-    var r = Math.round(Math.random() * (255 - 0) - 0);
-    var g = Math.round(Math.random() * (255-0) -0);
-    var b = Math.round(Math.random() * (255-0) -0);
+function aleaColor() {
+    var r = randomize(0, 255);
+    var g = randomize(0, 255);
+    var b = randomize(0, 255);
 
     console.log(r);
-    document.querySelector("#nom").setAttribute('style', 'color:rgb('+ r +','+ g + ','+ b +');');
+    document.querySelector("#nom").setAttribute('style', 'color:rgb(' + r + ',' + g + ',' + b + ');');
 }
 
+// Fonction qui change la couleur du background
+function aleaBackground() {
+    // Changement de couleur
+    var changecolor = function () {
+        var r = randomize(0, 255);
+        var g = randomize(0, 255);
+        var b = randomize(0, 255);
+        document.querySelector("html").setAttribute('style', 'background-color:rgb(' + r + ',' + g + ',' + b + ');');
+    };
 
+    // Changement de couleur qui se répète tout les 200ms
+    var interval = setInterval(changecolor, 200);
+
+    // Arrêt du changement de couleur au bout de 5000ms
+    setTimeout(function(){clearInterval(interval)}, 2000);
+}
 
 

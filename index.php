@@ -16,6 +16,7 @@
     <p>
         <input type="text" onkeyup="getNom()"/>
         <button onclick="aleaColor()">Change color !</button>
+        <button onclick="aleaBackground()">Change background !</button>
 
     </p>
 </main>
