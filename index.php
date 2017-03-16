@@ -9,9 +9,14 @@
 </head>
 <body>
 
-</body>
+<main>
+    <h1>toto</h1>
+    <p></p>
+</main>
+
 <script src="js/base.js"></script>
 <noscript>
     Javascript est désactivé sur votre navigateur.
 </noscript>
+</body>
 </html>

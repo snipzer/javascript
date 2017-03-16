@@ -1,21 +1,27 @@
-
 // BASE -----------------------------------------------
-// var toto;
 //
 // // Récupère une entrée utilisateur
-// toto = prompt("Entré votre nom:");
+// var prenom = prompt("Entrer votre prénom:");
 //
 // // Pose une question et renvois un booléen
-// var confirm = confirm("Question");
+// var confirm = confirm("Est-vous sûr ?");
 //
 // if(confirm)
 // {
-//     document.write(toto);
+//     if(typeof(prenom) === "undefined")
+//     {
+//         document.write("<p>Don't play with me hooman !</p>");
+//     }
+//     else
+//     {
+//         document.write("Bonjour" + " " + prenom);
+//     }
 // }
 // else
 // {
-//     document.write("Pas confirmer");
+//     document.write("Apparament vous n'êtes pas sur de votre prénom");
 // }
+
 
 
 // // Création d'un objet
@@ -40,16 +46,44 @@
 // console.error(obj);
 
 
-// Comparaison
-var a = true;
-var b = 1;
-var c = '1';
+// // Comparaison
+// var a = true;
+// var b = 1;
+// var c = '1';
+//
+// // Comparaison après conversion
+// console.log(a == b);
+// console.log(b == c);
+// console.log(a == c);
+// // Comparaison stricte
+// console.log(a === b);
+// console.log(b === c);
+// console.log(a === c);
 
-// Comparaison après conversion
-console.log(a == b);
-console.log(b == c);
-console.log(a == c);
-// Comparaison stricte
-console.log(a === b);
-console.log(b === c);
-console.log(a === c);
+// Création d'élément html
+var p = document.createElement("p");
+
+// Récupération d'élément html par tag
+var paras = document.getElementsByTagName("p");
+
+// InnerHTML récupère l'html dans l'élément a la position zéros on peut ensuite le réassigner
+paras[0].innerHTML = "Hellow World";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
