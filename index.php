@@ -13,8 +13,8 @@
     <h1></h1>
     <p></p>
     <p>
-        <input type="text"/>
-        <button onclick="getNom()" >Submit</button>
+        <input type="text" onkeyup="getNom()"/>
+
     </p>
 </main>
 
