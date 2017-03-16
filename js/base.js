@@ -77,24 +77,44 @@
 // // Renvois tout les éléments trouver (par l'id, classe, tag)
 // document.querySelectorAll();
 
+//
+// // Méthode parseInt pour transformer la chaine de caractère en entier
+// var nombre1 = parseInt(prompt("Entrez le premier nombre"));
+// var nombre2 = parseInt(prompt("Entrez le deuxième nombre"));
+//
+// var nombre3 = nombre1 + nombre2;
+//
+// document.querySelector("p").innerText = nombre1+" + "+nombre2+"= "+nombre3;
 
-// Méthode parseInt pour transformer la chaine de caractère en entier
-var nombre1 = parseInt(prompt("Entrez le premier nombre"));
-var nombre2 = parseInt(prompt("Entrez le deuxième nombre"));
+// Fonction
 
-var nombre3 = nombre1 + nombre2;
+function calc(arg1, arg2)
+{
+    var result = parseInt(arg1) + parseInt(arg2);
+    return (arg1+" + "+ arg2+ " = "+ result);
+}
 
-document.querySelector("p").innerText = nombre1+" + "+nombre2+"= "+nombre3;
-
-
-
-
+//document.querySelector("p").innerText = calc(prompt("Entrez le premier nombre"), prompt("Entrez le deuxième nombre"));
 
 
 
 
+function askId()
+{
+    var nom = "";
+    var prenom = "";
+    while(nom.length == 0)
+    {
+        nom = prompt("Renseignez votre nom:");
+    }
+    while(prenom.length == 0)
+    {
+        prenom = prompt("Renseignez votre prenom:");
+    }
+    document.querySelector("p").innerText = "Vous vous appelez "+prenom+" "+nom+".";
+}
 
-
+askId();
 
 
 
