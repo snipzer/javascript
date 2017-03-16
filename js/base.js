@@ -70,6 +70,12 @@ var paras = document.getElementsByTagName("p");
 paras[0].innerHTML = "Hellow World";
 
 
+// Méthode magique plus puissante
+// Renvois le premier élément trouver (par l'id, classe, tag)
+document.querySelector();
+
+// Renvois tout les éléments trouver (par l'id, classe, tag)
+document.querySelectorAll();
 
 
 
