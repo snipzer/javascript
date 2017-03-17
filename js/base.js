@@ -189,7 +189,7 @@ Object.keys(associativeArray).forEach(function(key, index)
 var name ='toto';
 setTimeout(function()
 {
-   alert(name);
+   console.log(name);
 }, 2000);
 
 name = 'titi';
@@ -205,4 +205,15 @@ function logName()
 }
 
 logName();
+ name = "tata";
 
+ // Ici setInterval qui évite de devoir faire une fonction récursive
+function logName2()
+{
+    setInterval(function()
+    {
+        console.log(name);
+    }, 2000);
+}
+
+logName2();
