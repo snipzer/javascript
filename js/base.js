@@ -225,18 +225,33 @@
 //
 // //logName2();
 
-// Fonction qui écris les mots un a un
+// Fonction qui écris les mots un a un avec clearInterval
+// function writeSentence(sentence, i)
+// {
+//     var tab = sentence.split(' ');
+//     i = i | 0;
+//     var writeSentence = setInterval(function ()
+//     {
+//         document.querySelector("#texte").innerHTML += tab[i++] + " ";
+//         if (i == tab.length)
+//         {
+//             clearInterval(writeSentence);
+//         }
+//     }, 500);
+// }
+
+// Fonction qui écris les mots un a un sans clearInterval
 function writeSentence(sentence, i)
 {
     var tab = sentence.split(' ');
     i = i | 0;
-    var writeSentence = setInterval(function () {
-        document.querySelector("#texte").innerHTML += tab[i++] + " ";
-        if (i == tab.length)
+    setInterval(function ()
+    {
+        if(i in tab)
         {
-            clearInterval(writeSentence);
+            document.querySelector("#texte").innerHTML += tab[i++] + " ";
         }
-    }, 1000);
+    }, 500);
 }
 
 writeSentence("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
