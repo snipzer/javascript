@@ -112,7 +112,7 @@
 //     }
 //     document.querySelector("p").innerHTML= "Vous vous appelez <strong>"+prenom+" "+nom+"</strong>.";
 // }
-
+/*
 // Récupération d'élément dans le formulaire
 function randomize(min, max) {
     min = Math.ceil(min);
@@ -151,5 +151,58 @@ function aleaBackground() {
     // Arrêt du changement de couleur au bout de 5000ms
     setTimeout(function(){clearInterval(interval)}, 2000);
 }
+*/
 
+// Tableau/Boucle/Synchrone/Asynchrone
+var tab = [1, 2, 3, 4, 5];
+
+tab.forEach(function(value, key, tab){
+   console.log(value);
+   console.log(key);
+   console.log(tab);
+   console.log("-------------");
+});
+
+
+var associativeArray = {
+    key: 'value',
+    foo: 'bar',
+    id: 42
+};
+
+//
+for (k in associativeArray)
+{
+    console.log(k+" => "+associativeArray[k]);
+}
+
+// Parcourt d'un tableau associatif avec foreach
+Object.keys(associativeArray).forEach(function(key, index)
+{
+    console.log(key+" => "+index);
+    console.log(associativeArray[key]);
+});
+
+
+
+// Ici set timeout est asynchrone, elle lance le compteur mais le changement de la variable nom est effectuer a l'instruction d'après donc il y a d'afficher titi
+var name ='toto';
+setTimeout(function()
+{
+   alert(name);
+}, 2000);
+
+name = 'titi';
+
+// Ici un setTimeout récursif
+function logName()
+{
+    setTimeout(function()
+    {
+       console.log(name);
+       logName();
+    }, 2000);
+}
+
+logName();
 
