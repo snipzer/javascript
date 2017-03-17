@@ -242,7 +242,9 @@
 //
 // writeSentence("Tolkien ipsum uilos lanthir taniquetil gwaihir mardil. Lameth elendil yavanna pelargir celon bandobras thalion formenos treebeard curunir. Aman dwalin ossirand hador alfirin sindar sindarin.");
 
+// =========================================================
 // Fonction qui affiche la date
+// =========================================================
 function showDate()
 {
     setInterval(function()
