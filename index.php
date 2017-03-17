@@ -21,16 +21,19 @@
     </p>
     <p>Date: <span id="heure"></span><span id="minute"></span><span id="seconde"></span></p>
     <p>
-        <button id="+1H" onclick="showDate().setHours()">+1H</button>
-        <button id="-1H">-1H</button>
-        <button id="+1M">+1M</button>
-        <button id="-1H">-1M</button>
-        <button id="+10S">+10S</button>
-        <button id="-10S">-10S</button>
+        <button id="+1H" onclick="horloge.modif('H', '+')">+1H</button>
+        <button id="-1H" onclick="horloge.modif('H', '-')" >-1H</button>
+        <button id="+1M" onclick="horloge.modif('M', '+')" >+1M</button>
+        <button id="-1H" onclick="horloge.modif('M', '-')" >-1M</button>
+        <button id="+10S" onclick="horloge.modif('S', '+')" >+10S</button>
+        <button id="-10S" onclick="horloge.modif('S', '-')" >-10S</button>
+        <button id="pause" onclick="horloge.stop()" >Pause</button>
+        <button id="reset" onclick="horloge.reset()" >Reset</button>
     </p>
 </main>
 
 <script src="js/base.js"></script>
+<script src="js/horloge.js"></script>
 <noscript>
     Javascript est désactivé sur votre navigateur.
 </noscript>
