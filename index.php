@@ -19,6 +19,7 @@
         <button onclick="aleaBackground()">Change background !</button>
 
     </p>
+    <p>Date: <span id="date"></span></p>
 </main>
 
 <script src="js/base.js"></script>

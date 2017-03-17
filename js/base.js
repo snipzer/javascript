@@ -224,20 +224,31 @@
 // }
 //
 // //logName2();
+//
+// // Fonction qui écris les mots un a un avec clearInterval
+// function writeSentence(sentence, i)
+// {
+//     var tab = sentence.split(' ');
+//     i = i | 0;
+//     var writeSentence = setInterval(function ()
+//     {
+//         document.querySelector("#texte").innerHTML += tab[i++] + " ";
+//         if (i == tab.length)
+//         {
+//             clearInterval(writeSentence);
+//         }
+//     }, 500);
+// }
+//
+// writeSentence("Tolkien ipsum uilos lanthir taniquetil gwaihir mardil. Lameth elendil yavanna pelargir celon bandobras thalion formenos treebeard curunir. Aman dwalin ossirand hador alfirin sindar sindarin.");
 
-// Fonction qui écris les mots un a un avec clearInterval
-function writeSentence(sentence, i)
+// Fonction qui affiche la date
+function showDate()
 {
-    var tab = sentence.split(' ');
-    i = i | 0;
-    var writeSentence = setInterval(function ()
+    setInterval(function()
     {
-        document.querySelector("#texte").innerHTML += tab[i++] + " ";
-        if (i == tab.length)
-        {
-            clearInterval(writeSentence);
-        }
-    }, 500);
+        var date = new Date();
+        document.querySelector("#date").innerHTML = date.getHours()+ " : "+date.getMinutes()+" : "+date.getSeconds();
+    }, 100);
 }
-
-writeSentence("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+showDate();
