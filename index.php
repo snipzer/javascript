@@ -19,7 +19,15 @@
         <button onclick="aleaBackground()">Change background !</button>
 
     </p>
-    <p>Date: <span id="date"></span></p>
+    <p>Date: <span id="heure"></span><span id="minute"></span><span id="seconde"></span></p>
+    <p>
+        <button id="+1H" onclick="showDate().setHours()">+1H</button>
+        <button id="-1H">-1H</button>
+        <button id="+1M">+1M</button>
+        <button id="-1H">-1M</button>
+        <button id="+10S">+10S</button>
+        <button id="-10S">-10S</button>
+    </p>
 </main>
 
 <script src="js/base.js"></script>

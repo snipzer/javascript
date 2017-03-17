@@ -245,12 +245,29 @@
 // =========================================================
 // Fonction qui affiche la date
 // =========================================================
+var divHeure = document.querySelector("#heure");
+var divMinute = document.querySelector("#minute");
+var divSeconde = document.querySelector("#seconde");
+
 function showDate()
 {
     setInterval(function()
     {
         var date = new Date();
-        document.querySelector("#date").innerHTML = date.getHours()+ " : "+date.getMinutes()+" : "+date.getSeconds();
+
+        var heure = (date.getHours() < 10) ? "0"+date.getHours() : date.getHours();
+        var minute = (date.getMinutes() < 10) ? "0"+date.getMinutes() : date.getMinutes();
+        var seconde = (date.getSeconds() < 10) ? "0"+date.getSeconds() : date.getSeconds();
+
+        divHeure.innerHTML = heure+ " : ";
+        divMinute.innerHTML = minute+" : ";
+        divSeconde.innerHTML = seconde;
+
     }, 100);
 }
 showDate();
+
+
+
+
+
