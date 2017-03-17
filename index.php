@@ -12,7 +12,7 @@
 <main>
     <h1></h1>
     <p>Votre nom est : <strong id="nom" ></strong></p>
-
+    <p id="texte"></p>
     <p>
         <input type="text" onkeyup="getNom()"/>
         <button onclick="aleaColor()">Change color !</button>
