@@ -19,6 +19,7 @@ function newElement()
     li.appendChild(t);
 
 
+
     // Si le champ de formulaire est vide demande a l'utilisateur de le remplir
     if(inputValue === "")
     {
@@ -33,12 +34,12 @@ function newElement()
     document.querySelector("#myInput").value = "";
 
     // Create a close button and append it to each list item
-    var span = document.createElement("span");
+    var spanClose = document.createElement("span");
     var txt = document.createTextNode("DELETE");
 
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
+    spanClose.className = "close";
+    spanClose.appendChild(txt);
+    li.appendChild(spanClose);
 
     // Click on a close button to hide the current list item
     var close = document.querySelectorAll(".close");
