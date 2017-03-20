@@ -28,6 +28,7 @@
             <ul>
                 <li><a href="horloge.php">Voir l'horloge !</a></li>
                 <li><a href="square.php">Voir le square !</a></li>
+                <li><a href="todolist.php">Voir la todoList !</a></li>
             </ul>
         </article>
     </section>
