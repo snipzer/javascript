@@ -58,16 +58,50 @@ ul li.checked::before {
 
 /* Style the close button */
 .close {
-    position: absolute;
+    float: right;
     right: 0;
     top: 0;
-    padding: 12px 16px 12px 16px
+    padding: 10px 5px 10px 10px;
+    margin-left: 5px;
 }
 
 .close:hover {
     background-color: #f44336;
     color: white;
 }
+
+/* Style the up button */
+.up {
+
+    float: right;
+    right: 0;
+    top: 0;
+    padding: 10px 5px 10px 10px;
+    margin-right: 5px;
+}
+
+.up:hover {
+    background-color: forestgreen;
+    color: white;
+}
+
+
+/* Style the down button */
+.down {
+
+    float: right;
+    right: 0;
+    top: 0;
+    padding: 10px 5px 10px 10px;
+    margin-right: 5px;
+}
+
+.down:hover {
+    background-color: deepskyblue;
+    color: white;
+}
+
+
 
 /* Style the header */
 .header {
