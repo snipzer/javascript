@@ -9,9 +9,18 @@
     <title>Document</title>
 </head>
 <body onkeydown="move(event)" >
-<div class="conteneur">
-    <div class="square"></div>
-</div>
+<section>
+    <article>
+        <header>
+            <button onclick="createSquare()">Start !</button>
+            <button onclick="deleteSquare()">Stop !</button>
+            <button onclick="createExplosion()">Explosion !</button>
+        </header>
+        <div class="conteneur">
+
+        </div>
+    </article>
+</section>
 </body>
 <script src="js/square.js"></script>
 </html>
