@@ -68,11 +68,6 @@ function newElement()
     {
         Down[i].onclick = function ()
         {
-            /*
-            var liNext = this.parentElement.nextElementSibling.nextElementSibling;
-            var thisLi = this.parentElement;
-            document.querySelector("#myUL").insertBefore(thisLi, liNext);
-            */
             var liNext = this.parentElement.nextElementSibling;
             if(liNext === null)
             {
