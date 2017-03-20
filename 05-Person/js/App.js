@@ -1,3 +1,3 @@
-/**
- * Created by snipzer on 20/03/17.
- */
+var bob = new Person("Bob");
+document.querySelector(".sayHi").onclick = bob.sayHi.bind(bob);
+document.querySelector(".sayBye").onclick = bob.sayBye.bind(bob);

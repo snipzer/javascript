@@ -17,11 +17,5 @@
     </p>
 </section>
 <script src="js/Person.js"></script>
-<script>
-    // TODO Fragmenté cette partie dans un app.js
-    var bob = new Person("Bob");
-    document.querySelector(".sayHi").onclick = bob.sayHi.bind(bob);
-    document.querySelector(".sayBye").onclick = bob.sayBye.bind(bob);
-</script>
 </body>
 </html>
