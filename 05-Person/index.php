@@ -8,7 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-<section id="profile" >
+<section id="profile1" >
+    <p class="name" ></p>
+    <p class="message" ></p>
+    <p>
+        <button class="sayHi" >Say Hi !</button>
+        <button class="sayBye" >Say Bye !</button>
+    </p>
+</section>
+<section id="profile2" >
     <p class="name" ></p>
     <p class="message" ></p>
     <p>
@@ -17,5 +25,6 @@
     </p>
 </section>
 <script src="js/Person.js"></script>
+<script src="js/App.js"></script>
 </body>
 </html>

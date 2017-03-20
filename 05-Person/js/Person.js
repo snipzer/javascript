@@ -1,14 +1,17 @@
-function Person(name){
+function Person(name, elemId){
     this.name = name;
-    document.querySelector(".name").innerText = this.name;
+    this.element = document.querySelector('#'+elemId);
+    this.element.querySelector(".name").innerText = this.name;
 }
 
 Person.prototype.sayHi = function ()
 {
-    document.querySelector(".message").innerText = "Bonjour ! my name is "+this.name;
+    this.element.querySelector(".message").innerText = "Bonjour ! my name is "+this.name;
 };
 
 Person.prototype.sayBye = function ()
 {
-    document.querySelector(".message").innerText = "Au revoir !";
+    this.element.querySelector(".message").innerText = "Au revoir !";
 };
+
+
