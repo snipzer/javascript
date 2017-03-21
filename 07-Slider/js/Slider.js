@@ -3,19 +3,20 @@ function Slider(idElement, images, delay)
     this.element = document.querySelector("#"+idElement);
     this.images = images;
     this.delay = delay;
+    this.index = 0;
     this.generate();
+    this.toggle();
 }
 
-Slider.prototype.createButton = function (name, fonction)
+Slider.prototype.createButton = function (parent, name, fonction)
 {
     var button = document.createElement("button");
     button.className = name;
     button.style.width = "50px";
     button.style.height = "30px";
     button.onclick = fonction;
-    button.innerText = name;
 
-    return button;
+    parent.appendChild(button);
 };
 
 Slider.prototype.generate = function ()
@@ -23,46 +24,55 @@ Slider.prototype.generate = function ()
     // Génération du conteneur de l'image
     var img = document.createElement("img");
     img.className = "imageHolder";
+    img.style.width = "300px";
+    img.style.height = "300px";
 
-    img.src = "image/"+this.images[0]+".jpg";
+    img.src = this.images[this.index];
     this.element.appendChild(img);
-
 
     // Génération des boutons
     var divButton = document.createElement("div");
     divButton.className = "buttonHolder";
-    divButton.appendChild(this.createButton("play", this.play));
-    divButton.appendChild(this.createButton("pause", this.pause));
-    divButton.appendChild(this.createButton("next", this.next));
-    divButton.appendChild(this.createButton("previous", this.previous));
-    divButton.appendChild(this.createButton("random", this.random));
+    this.createButton(divButton, "fa fa-pause", this.toggle.bind(this));
+    this.createButton(divButton, "fa fa-forward", this.next.bind(this));
+    this.createButton(divButton, "fa fa-backward", this.previous.bind(this));
+    this.createButton(divButton, "fa fa-random", this.random.bind(this));
 
     // Ajout des éléments à la page
-
+    this.element.appendChild(img);
     this.element.appendChild(divButton);
 };
 
-Slider.prototype.play = function ()
-{
-    console.log("play");
-};
-
-Slider.prototype.pause = function ()
-{
-    console.log("pause");
+Slider.prototype.toggle = function() {
+    if (this.interval) {
+        clearInterval(this.interval);
+        this.interval = null;
+    } else {
+        this.interval = setInterval(this.next.bind(this), this.delay);
+    }
 };
 
 Slider.prototype.next = function ()
 {
-    console.log("next");
+    this.index = this.index === this.images.length - 1 ? 0 : this.index + 1;
+
+    this.element.querySelector(".imageHolder").src = this.images[this.index];
 };
 
 Slider.prototype.previous = function ()
 {
-    console.log("previous");
+    this.index = this.index === 0 ? this.images.length - 1 : this.index - 1;
+    this.element.querySelector(".imageHolder").src = this.images[this.index];
 };
 
 Slider.prototype.random = function ()
 {
-    console.log("random");
+    var index;
+    do {
+        index = Math.floor(Math.random()*(this.images.length));
+    } while(index === this.index)
+
+    this.index = index;
+
+    this.element.querySelector(".imageHolder").src = this.images[this.index];
 };
