@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/square.css">
     <title>Document</title>
 </head>
-<body onkeydown="move(event)" >
+<body>
 <section>
     <article>
         <header>
-            <button onclick="createSquare()">Start !</button>
-            <button onclick="deleteSquare()">Stop !</button>
-            <button onclick="createExplosion()">Explosion !</button>
+            <button id="start">Start !</button>
+            <button id="stop">Stop !</button>
+            <button id="explosion">Explosion !</button>
         </header>
         <div class="conteneur">
 
@@ -22,5 +22,8 @@
     </article>
 </section>
 </body>
-<script src="js/square.js"></script>
+<script src="js/Square.js"></script>
+<script>
+    new Square();
+</script>
 </html>
