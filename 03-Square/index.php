@@ -12,8 +12,7 @@
 <section>
     <article>
         <header>
-            <button id="start">Start !</button>
-            <button id="stop">Stop !</button>
+            <button id="refresh">Start !</button>
             <button id="explosion">Explosion !</button>
         </header>
         <div class="conteneur">
@@ -23,7 +22,9 @@
 </section>
 </body>
 <script src="js/Square.js"></script>
+<script src="js/Explosion.js"></script>
 <script>
     new Square();
+    new Explosion();
 </script>
 </html>

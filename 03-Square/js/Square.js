@@ -23,7 +23,7 @@ Square.prototype.createSquare = function ()
 Square.prototype.deleteSquare = function ()
 {
     document.querySelector(".conteneur").removeChild(document.querySelector(".square"));
-    createSquare();
+    this.createSquare();
 };
 
 Square.prototype.move = function (event)
@@ -40,7 +40,7 @@ Square.prototype.move = function (event)
             // On reformate la valeur avec px
             if(valtop < 0)
             {
-                deleteSquare();
+                this.deleteSquare();
             }
             else
             {
@@ -55,7 +55,7 @@ Square.prototype.move = function (event)
             valtop = (parseInt(top) + 10);
             if(valtop > 750)
             {
-                deleteSquare();
+                this.deleteSquare();
             }
             else
             {
@@ -69,7 +69,7 @@ Square.prototype.move = function (event)
             valleft = (parseInt(left) - 10);
             if(valleft < 0)
             {
-                deleteSquare();
+                this.deleteSquare();
             }
             else
             {
@@ -83,7 +83,7 @@ Square.prototype.move = function (event)
             valleft = (parseInt(left) + 10);
             if(valleft > 750)
             {
-                deleteSquare();
+                this.deleteSquare();
             }
             else
             {
@@ -98,7 +98,6 @@ Square.prototype.move = function (event)
 
 Square.prototype.bindEvent = function ()
 {
-    document.querySelector("#start").onclick = Square.prototype.createSquare.bind(this);
-    document.querySelector("#stop").onclick = Square.prototype.deleteSquare.bind(this);
-    document.querySelector("body").onkeydown = Square.prototype.move(event).bind(this);
+    document.querySelector("#refresh").onclick = Square.prototype.deleteSquare.bind(this);
+    document.querySelector("body").onkeydown = Square.prototype.move.bind(this);
 };
