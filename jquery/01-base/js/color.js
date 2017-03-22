@@ -1,10 +1,5 @@
 $(document).ready(function()
 {
-    function changeColor(color)
-    {
-        $("#nom").css("color", color);
-    }
-
     // La div id nom récupère la valeur de l'input type text
     $("input").keyup(function ()
     {
@@ -17,3 +12,13 @@ $(document).ready(function()
         changeColor($(this).attr("data"));
     });
 });
+
+
+function changeColor(color)
+{
+    $('#nom').fadeOut(500, function ()
+    {
+        $(this).css("color", color);
+        $(this).fadeIn(500);
+    });
+}
