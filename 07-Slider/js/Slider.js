@@ -1,9 +1,12 @@
-function Slider(idElement, images, delay)
+function Slider(idElement, images, param)
 {
+    this.param = param || {delay: 1000, imageWidth: "250px", imageHeight: "250px"};
     this.element = document.querySelector("#"+idElement);
     this.images = images;
-    this.delay = delay;
+    this.delay = this.param["delay"] || 1000;
     this.index = 0;
+    this.imageWidth = this.param["imageWidth"];
+    this.imageHeight = this.param["imageHeight"];
     this.generate();
     this.toggle();
 }
@@ -24,8 +27,8 @@ Slider.prototype.generate = function ()
     // Génération du conteneur de l'image
     var img = document.createElement("img");
     img.className = "imageHolder";
-    img.style.width = "300px";
-    img.style.height = "300px";
+    img.style.width = this.imageWidth;
+    img.style.height = this.imageHeight;
 
     img.src = this.images[this.index];
     this.element.appendChild(img);
