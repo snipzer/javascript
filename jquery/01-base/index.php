@@ -8,13 +8,35 @@
     <title>Document</title>
 </head>
 <body>
-
+<section>
+    <article>
+        <h1></h1>
+        <p>Votre nom est : <strong id="nom" ></strong></p>
+        <p id="texte"></p>
+        <p>
+            <input type="text"/>
+            <button id="rouge">Rouge</button>
+            <button id="bleu">Bleu</button>
+            <button id="vert">Vert</button>
+        </p>
+    </article>
+</section>
 </body>
 <script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/color.js"></script>
 <script>
-    $(document).ready(function ()
+    /*
+    // Execution après chargement de la page avec Jquery
+    $(function ()
     {
         alert("Hello world !");
     });
+
+    // La même mais en javascript
+    window.onload = function ()
+    {
+        alert("titi");
+    }
+    */
 </script>
 </html>
