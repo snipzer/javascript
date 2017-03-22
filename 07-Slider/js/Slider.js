@@ -1,6 +1,6 @@
 function Slider(idElement, images, param)
 {
-    this.param = param || {delay: 1000, imageWidth: "250px", imageHeight: "250px"};
+    this.param = Object.assign({}, param) || {delay: 1000, imageWidth: "250px", imageHeight: "250px"};
     this.element = document.querySelector("#"+idElement);
     this.images = images;
     this.delay = this.param["delay"] || 1000;
