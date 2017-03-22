@@ -25,7 +25,7 @@ Slider.prototype.createButton = function (parent, name, fonction)
     parent.appendChild(button);
 };
 
-// Fonciton qui va généré tout le html
+// Fonction qui va généré tout le html
 Slider.prototype.generate = function ()
 {
     // Génération du conteneur de l'image

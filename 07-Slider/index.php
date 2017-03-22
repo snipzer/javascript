@@ -12,6 +12,18 @@
     <div id="sliders1" ></div>
     <div id="sliders2" ></div>
 </body>
-<script src="js/Slider.js"></script>
-<script src="js/App.js"></script>
+
+<script src="js/sliderTest.js"></script>
+<script>
+    var tabImages = ["image/shadock1.jpg", "image/shadock2.jpg", "image/shadock3.jpg", "image/shadock4.jpg", "image/shadock5.jpg", "image/shadock6.jpg", "image/shadock7.jpg"];
+
+    var param1 = {
+        delay: 2000,
+        imageWidth: "250px",
+        imageHeight: "250px"
+    };
+
+    SLIDER.generate("sliders1", tabImages, param1);
+    SLIDER.generate("sliders2", tabImages, param1);
+</script>
 </html>
