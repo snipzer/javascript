@@ -21,7 +21,7 @@ html{
 
 .explosion{
     position: relative;
-    background-color: black;
+    background-color: yellow;
     width: 60px;
     height: 60px;
 }
