@@ -1,20 +1,17 @@
-var SLIDER = (function ()
+(function ()
 {
     /** ATTRIBUT PRIVEE **/
-
+    var Slider = {};
+    Slider.PARAM = Object.assign({delay: 1000, imageWidth: "250px", imageHeight: "250px"}, param);
+    Slider.element = document.querySelector("#"+ idElement);
+    Slider.tabImages = images;
+    Slider.delay = Slider.PARAM['delay'];
+    Slider.index = 0;
+    Slider.imageWidth = Slider.PARAM['imageWidth'];
+    Slider.imageHeight = Slider.PARAM['imageHeight'];
 
     /** METHOD PRIVEE **/
-    function construct(idElement, images, param)
-    {
-        var Slider = {};
-            Slider.PARAM = Object.assign({delay: 1000, imageWidth: "250px", imageHeight: "250px"}, param);
-            Slider.element = document.querySelector("#"+ idElement);
-            Slider.tabImages = images;
-            Slider.delay = Slider.PARAM['delay'];
-            Slider.index = 0;
-            Slider.imageWidth = Slider.PARAM['imageWidth'];
-            Slider.imageHeight = Slider.PARAM['imageHeight'];
-    }
+
 
     function createButton(parent, name, fonction)
     {
@@ -95,7 +92,6 @@ var SLIDER = (function ()
     // Fonction qui va généré tout le html
     Slider.generate = function (idElement, images, param)
     {
-        construct(idElement, images, param);
         // Génération du conteneur de l'image
         var img = document.createElement("img");
         img.className = "imageHolder";
@@ -119,4 +115,4 @@ var SLIDER = (function ()
     };
 
     return Slider;
-}());
+})();
