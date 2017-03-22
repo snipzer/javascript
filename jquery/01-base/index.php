@@ -15,9 +15,9 @@
         <p id="texte"></p>
         <p>
             <input type="text"/>
-            <button id="rouge">Rouge</button>
-            <button id="bleu">Bleu</button>
-            <button id="vert">Vert</button>
+            <button class="color" data="red">Rouge</button>
+            <button class="color" data="blue">Bleu</button>
+            <button class="color" data="green">Vert</button>
         </p>
     </article>
 </section>
