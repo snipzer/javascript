@@ -24,7 +24,7 @@ $(document).ready(function ()
         $(".paragraphe").changeColor({
             colors: ["blue", "green", "red"], success: function ()
             {
-                alert("totooooooo!!!!!!")
+                alert("Modification effectuer");
             }
         })
     });
@@ -32,20 +32,6 @@ $(document).ready(function ()
 });
 (function ($)
 {
-    /*
-     // Plugin changeColor
-     $.fn.changeColor = function (colors)
-     {
-     this.each(function (i) {
-     $(this).fadeOut(500, function ()
-     {
-     $(this).css("color", colors[i] ? colors[i] : colors[i%color.length]);
-     $(this).fadeIn(500);
-     });
-     });
-     return this;
-     };
-     */
     // Plugin changeColor
     $.fn.changeColor = function (options)
     {
