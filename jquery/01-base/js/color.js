@@ -10,8 +10,7 @@ $(document).ready(function()
     // Le bouton applique la couleur qu'il possède en data
     $(".color").click(function ()
     {
-        var name = $("#nom");
-        $(this).changeColor(name, $(this).attr("data"));
+        $(this).changeColor($("#nom"), $(this).attr("data"));
     });
 
     // Au click, ajoute
@@ -20,23 +19,28 @@ $(document).ready(function()
         $('#texte').changeName("tata");
     });
 });
-
-// Plugin changeColor
-$.fn.changeColor = function (name, color)
+(function($)
 {
-    $(name).fadeOut(500, function ()
+    // Plugin changeColor
+    $.fn.changeColor = function (name, color)
     {
-        $(this).css("color", color);
-        $(this).fadeIn(500);
-    });
-};
+        $(name).fadeOut(500, function ()
+        {
+            $(this).css("color", color);
+            $(this).fadeIn(500);
+        });
+
+        return this;
+    };
 
 // Plugin changeName
-$.fn.changeName = function (name)
-{
-    $(this).fadeOut(500, function()
+    $.fn.changeName = function (name)
     {
-       $(this).text(name);
-       $(this).fadeIn(500);
-    });
-};
+        $(this).fadeOut(500, function()
+        {
+            $(this).text(name);
+            $(this).fadeIn(500);
+        });
+        return this;
+    };
+})(jQuery);
