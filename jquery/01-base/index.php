@@ -24,6 +24,7 @@
             <button class="color" data="blue">Bleu</button>
             <button class="color" data="green">Vert</button>
             <button id="changeName" >Change Name !</button>
+            <button id="sayHi" ></button>
         </p>
     </article>
 </section>

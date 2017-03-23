@@ -1,4 +1,4 @@
-$(document).ready(function()
+$(document).ready(function ()
 {
     // La div id nom récupère la valeur de l'input type text
     $("input").keyup(function ()
@@ -21,26 +21,31 @@ $(document).ready(function()
 
     $(".paragraphe").click(function ()
     {
-        $(".paragraphe").changeColor({colors: ["blue", "green", "red"], success: function() { alert("totooooooo!!!!!!") }})
+        $(".paragraphe").changeColor({
+            colors: ["blue", "green", "red"], success: function ()
+            {
+                alert("totooooooo!!!!!!")
+            }
+        })
     });
 
 });
-(function($)
+(function ($)
 {
     /*
-    // Plugin changeColor
-    $.fn.changeColor = function (colors)
-    {
-        this.each(function (i) {
-            $(this).fadeOut(500, function ()
-            {
-                $(this).css("color", colors[i] ? colors[i] : colors[i%color.length]);
-                $(this).fadeIn(500);
-            });
-        });
-        return this;
-    };
-*/
+     // Plugin changeColor
+     $.fn.changeColor = function (colors)
+     {
+     this.each(function (i) {
+     $(this).fadeOut(500, function ()
+     {
+     $(this).css("color", colors[i] ? colors[i] : colors[i%color.length]);
+     $(this).fadeIn(500);
+     });
+     });
+     return this;
+     };
+     */
     // Plugin changeColor
     $.fn.changeColor = function (options)
     {
@@ -49,15 +54,16 @@ $(document).ready(function()
             success: null
         }, options);
 
-        var length = $(this).length -1;
+        var length = $(this).length - 1;
 
-        this.each(function (i) {
+        this.each(function (i)
+        {
             $(this).fadeOut(500, function ()
             {
                 $(this).css("color", settings.colors[i] ? settings.colors[i] : settings.colors[i % settings.colors.length]);
                 $(this).fadeIn(500, function ()
                 {
-                    if(i === length - 1 && settings.success)
+                    if (i === length - 1 && settings.success)
                     {
                         settings.success();
                     }
@@ -70,7 +76,7 @@ $(document).ready(function()
 // Plugin changeName
     $.fn.changeName = function (name)
     {
-        $(this).fadeOut(500, function()
+        $(this).fadeOut(500, function ()
         {
             $(this).text(name);
             $(this).fadeIn(500);
