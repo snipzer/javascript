@@ -14,13 +14,14 @@ $(document).ready(function()
         $(this).changeColor(name, $(this).attr("data"));
     });
 
+    // Au click, ajoute
     $("#changeName").click(function ()
     {
-        $('#texte').text("toto").changeName("toto");
+        $('#texte').changeName("tata");
     });
 });
 
-
+// Plugin changeColor
 $.fn.changeColor = function (name, color)
 {
     $(name).fadeOut(500, function ()
@@ -30,7 +31,7 @@ $.fn.changeColor = function (name, color)
     });
 };
 
-
+// Plugin changeName
 $.fn.changeName = function (name)
 {
     $(this).fadeOut(500, function()
