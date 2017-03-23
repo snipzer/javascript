@@ -10,7 +10,7 @@ $(document).ready(function()
     // Le bouton applique la couleur qu'il possède en data
     $(".color").click(function ()
     {
-        $("#nom").changeColor($(this).attr("data"));
+        $("#nom").changeColor([$(this).attr("data")]);
     });
 
     // Au click, ajoute
@@ -24,12 +24,13 @@ $(document).ready(function()
     // Plugin changeColor
     $.fn.changeColor = function (color)
     {
-        $(this).fadeOut(500, function ()
-        {
-            $(this).css("color", color);
-            $(this).fadeIn(500);
+        this.each(function (i) {
+            $(this).fadeOut(500, function ()
+            {
+                $(this).css("color", color[i] ? color[i] : color[i%color.length]);
+                $(this).fadeIn(500);
+            });
         });
-
         return this;
     };
 
