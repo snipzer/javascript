@@ -13,9 +13,11 @@
         <h1></h1>
         <p>Votre nom est : <strong id="nom" ></strong></p>
         <p id="texte"></p>
+        <p class="groupeParagraphe">
         <?php for($i = 0; $i <= 10; $i++):?>
-        <p class="paragraphe">Paragraphe numero:<?php echo $i; ?></p>
+        <p class="paragraphe">Paragraphe n°<?php echo $i; ?></p>
         <?php endfor; ?>
+        </p>
         <p>
             <input type="text"/>
             <button class="color" data="red">Rouge</button>

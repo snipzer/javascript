@@ -10,7 +10,7 @@ $(document).ready(function()
     // Le bouton applique la couleur qu'il possède en data
     $(".color").click(function ()
     {
-        $("#nom").changeColor([$(this).attr("data")]);
+        $("#nom").changeColor({colors: [$(this).attr("data")]});
     });
 
     // Au click, ajoute
@@ -18,17 +18,50 @@ $(document).ready(function()
     {
         $('#texte').changeName("tata");
     });
+
+    $(".paragraphe").click(function ()
+    {
+        $(".paragraphe").changeColor({colors: ["blue", "green", "red"], success: function() { alert("totooooooo!!!!!!") }})
+    });
+
 });
 (function($)
 {
+    /*
     // Plugin changeColor
-    $.fn.changeColor = function (color)
+    $.fn.changeColor = function (colors)
     {
         this.each(function (i) {
             $(this).fadeOut(500, function ()
             {
-                $(this).css("color", color[i] ? color[i] : color[i%color.length]);
+                $(this).css("color", colors[i] ? colors[i] : colors[i%color.length]);
                 $(this).fadeIn(500);
+            });
+        });
+        return this;
+    };
+*/
+    // Plugin changeColor
+    $.fn.changeColor = function (options)
+    {
+        var settings = $.extend({
+            colors: ['red', 'blue'],
+            success: null
+        }, options);
+
+        var length = $(this).length -1;
+
+        this.each(function (i) {
+            $(this).fadeOut(500, function ()
+            {
+                $(this).css("color", settings.colors[i] ? settings.colors[i] : settings.colors[i % settings.colors.length]);
+                $(this).fadeIn(500, function ()
+                {
+                    if(i === length - 1 && settings.success)
+                    {
+                        settings.success();
+                    }
+                });
             });
         });
         return this;
