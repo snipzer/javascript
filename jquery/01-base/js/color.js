@@ -6,19 +6,36 @@ $(document).ready(function()
         $("#nom").text($('input[type="text"]').val());
     });
 
+
     // Le bouton applique la couleur qu'il possède en data
-    $(".color").click(function()
+    $(".color").click(function ()
     {
-        changeColor($(this).attr("data"));
+        var name = $("#nom");
+        $(this).changeColor(name, $(this).attr("data"));
+    });
+
+    $("#changeName").click(function ()
+    {
+        $('#texte').text("toto").changeName("toto");
     });
 });
 
 
-function changeColor(color)
+$.fn.changeColor = function (name, color)
 {
-    $('#nom').fadeOut(500, function ()
+    $(name).fadeOut(500, function ()
     {
         $(this).css("color", color);
         $(this).fadeIn(500);
     });
-}
+};
+
+
+$.fn.changeName = function (name)
+{
+    $(this).fadeOut(500, function()
+    {
+       $(this).text(name);
+       $(this).fadeIn(500);
+    });
+};
