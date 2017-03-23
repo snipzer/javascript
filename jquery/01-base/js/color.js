@@ -10,7 +10,7 @@ $(document).ready(function()
     // Le bouton applique la couleur qu'il possède en data
     $(".color").click(function ()
     {
-        $(this).changeColor($("#nom"), $(this).attr("data"));
+        $("#nom").changeColor($(this).attr("data"));
     });
 
     // Au click, ajoute
@@ -22,9 +22,9 @@ $(document).ready(function()
 (function($)
 {
     // Plugin changeColor
-    $.fn.changeColor = function (name, color)
+    $.fn.changeColor = function (color)
     {
-        $(name).fadeOut(500, function ()
+        $(this).fadeOut(500, function ()
         {
             $(this).css("color", color);
             $(this).fadeIn(500);
